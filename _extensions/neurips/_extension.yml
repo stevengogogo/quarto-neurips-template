@@ -6,8 +6,11 @@ contributes:
     pdf:
       # define default configuration for the pdf version of your format
       documentclass: article
+      papersize: letter
       cite-method: natbib
       number-sections: true
+      pdf-engine: pdflatex
+      toc: false
       # Set this below (`biblio-config: false`) if your cls already load a bst file
       # biblio-config: false
       # Content to add in header that your format is using
@@ -32,6 +35,7 @@ contributes:
         \newtheorem{lemma}{Lemma}
       template-partials:
         # Add here the partials your format is using
+        - "partials/graphics.tex"
         - "partials/before-body.tex"
         - "partials/title.tex"
         - "partials/_authors.tex"
