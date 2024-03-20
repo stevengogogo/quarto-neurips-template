@@ -1,4 +1,4 @@
-# Article Format Template (AFT)
+# NeurIPS 2023 Submission Template with Quarto Journal
 
 <!-- REMOVE THIS IN YOUR FORMAT TEMPLATE -->
 > Template for creating a new journal article format for Quarto. 

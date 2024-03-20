@@ -1,25 +1,21 @@
 ---
-title: "Demo aft format to use as template"
+title: "Demo NeurIPS format to use as template"
 format:
-  aft-pdf:
+  neurips-pdf:
     keep-tex: true  
-  aft-html: default
+  neurips-html: default
 author:
   - name: John Doe
     affiliations:
-      - name: Dummy org
-        department: Cool Dep
-        address: Somewhere
-        city: Magic city
-        country: best one
-        postal-code: 9999
+      - name: Texas A&M University
+        department: Department of Electrical and Computer Engineering
+        address: College Station, TX 77840
       - Demo Journal
-    orcid: 0000-0000-0000-0000
     email: JD@example.org
-    url: https://example.org/
   - name: his friend
     affiliations:
       - Another Affiliation
+  
 abstract: |
   This document is only a demo explaining how to use the template.
 keywords: [template, demo]
@@ -145,23 +141,7 @@ PDF are rendered using {{< latex >}} but it is best if one can use a Markdown sy
 
 `{{< latex >}}` used in source is a shortcode syntax where the shortcode is included in the extension folder `_extensions`
 
-### Code chunk {#sec-chunks}
 
-This format hide chunks by default as option has been set in `_extension.yml` file.
-
-```{r}
-#| prompt: true
-# Loading some data but this chunk won't be shown.
-data("quine", package = "MASS")
-```
-
-But you can set `echo` option to `true` locally in the chunk
-
-```{r}
-#| echo: true
-m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
-summary(m_pois)
-```
 
 ### Text color {#sec-summary}
 
@@ -179,3 +159,27 @@ Differences between `aft-html` and `aft-pdf`:
 
 * For the HTML format, we are using Pandoc citeproc to include the bibliography. Here `reference-section-title` controls the title for the chapter that will be used.
 * For the PDF format, `natbib` is used by default and the bibliography is included with a title by the LaTeX template. 
+
+## Table
+
+|a|b|
+|:---:|:---:|
+|1|2|
+|3|4|
+
+```{r}
+#| label: tbl-simple
+#| tbl-cap: Caption centered above table
+#| echo: false
+knitr::kable(head(mtcars)[,1:4])
+```
+
+
+## Math
+
+The equation is displayed here as @eq-1
+
+$$
+\frac{1}{2}
+$${#eq-1}
+

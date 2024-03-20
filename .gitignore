@@ -1,1 +1,9 @@
 .DS_Store
+
+/.luarc.json
+template.pdf
+template.tex
+*_files/
+*.html
+neurips_2023.sty
+!_extensions/neurips/neurips_2023.sty
