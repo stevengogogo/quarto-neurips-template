@@ -98,21 +98,25 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#about-quarto-extensions-formats-and-quarto-journals-article" id="toc-about-quarto-extensions-formats-and-quarto-journals-article" class="nav-link" data-scroll-target="#about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">2</span> About Quarto Extensions formats And Quarto Journals Article</a></li>
-  <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"><span class="header-section-number">3</span> Structure of this repository</a>
+  <li><a href="#related-work" id="toc-related-work" class="nav-link" data-scroll-target="#related-work"><span class="header-section-number">2</span> Related Work</a></li>
+  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method"><span class="header-section-number">3</span> Method</a></li>
+  <li><a href="#about-quarto-extensions-formats-and-quarto-journals-article" id="toc-about-quarto-extensions-formats-and-quarto-journals-article" class="nav-link" data-scroll-target="#about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">4</span> About Quarto Extensions formats And Quarto Journals Article</a></li>
+  <li><a href="#structure-of-this-repository" id="toc-structure-of-this-repository" class="nav-link" data-scroll-target="#structure-of-this-repository"><span class="header-section-number">5</span> Structure of this repository</a>
   <ul class="collapse">
-  <li><a href="#extensionsaft" id="toc-extensionsaft" class="nav-link" data-scroll-target="#extensionsaft"><span class="header-section-number">3.1</span> <code>_extensions\aft</code></a></li>
+  <li><a href="#extensionsaft" id="toc-extensionsaft" class="nav-link" data-scroll-target="#extensionsaft"><span class="header-section-number">5.1</span> <code>_extensions\aft</code></a></li>
   </ul></li>
-  <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"><span class="header-section-number">4</span> Checklist: Creating a custom format</a></li>
-  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">5</span> Demo of some features found in this demo journal template</a>
+  <li><a href="#checklist-creating-a-custom-format" id="toc-checklist-creating-a-custom-format" class="nav-link" data-scroll-target="#checklist-creating-a-custom-format"><span class="header-section-number">6</span> Checklist: Creating a custom format</a></li>
+  <li><a href="#demo-of-some-features-found-in-this-demo-journal-template" id="toc-demo-of-some-features-found-in-this-demo-journal-template" class="nav-link" data-scroll-target="#demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">7</span> Demo of some features found in this demo journal template</a>
   <ul class="collapse">
-  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="header-section-number">5.1</span> Shortcode demo</a></li>
-  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="header-section-number">5.2</span> Text color</a></li>
+  <li><a href="#sec-shortcode" id="toc-sec-shortcode" class="nav-link" data-scroll-target="#sec-shortcode"><span class="header-section-number">7.1</span> Shortcode demo</a></li>
+  <li><a href="#sec-summary" id="toc-sec-summary" class="nav-link" data-scroll-target="#sec-summary"><span class="header-section-number">7.2</span> Text color</a></li>
   <li><a href="#using-references" id="toc-using-references" class="nav-link" data-scroll-target="#using-references">Using references</a></li>
   </ul></li>
-  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table"><span class="header-section-number">6</span> Table</a></li>
-  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math"><span class="header-section-number">7</span> Math</a></li>
-  <li><a href="#figure" id="toc-figure" class="nav-link" data-scroll-target="#figure"><span class="header-section-number">8</span> Figure</a></li>
+  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table"><span class="header-section-number">8</span> Table</a></li>
+  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math"><span class="header-section-number">9</span> Math</a></li>
+  <li><a href="#figure" id="toc-figure" class="nav-link" data-scroll-target="#figure"><span class="header-section-number">10</span> Figure</a></li>
+  <li><a href="#label-latex-code" id="toc-label-latex-code" class="nav-link" data-scroll-target="#label-latex-code"><span class="header-section-number">11</span> Label latex code</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">12</span> Conclusion</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="template.pdf"><i class="bi bi-file-pdf"></i>PDF (neurips)</a></li></ul></div></nav>
@@ -179,16 +183,22 @@ window.Quarto = {
 <p>This is a dummy example only for the purpose to use this repo as a template starter for creating new formats. For this <code>article-format-template</code> we call our dummy article <code>aft</code>.</p>
 <p>This quarto extension format supports PDF and HTML outputs. <code>quarto-journals</code> is aiming at porting existing {{&lt; latex &gt;}} template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.</p>
 </section>
-<section id="about-quarto-extensions-formats-and-quarto-journals-article" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">2</span> About Quarto Extensions formats And Quarto Journals Article</h2>
+<section id="related-work" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="related-work"><span class="header-section-number">2</span> Related Work</h2>
+</section>
+<section id="method" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="method"><span class="header-section-number">3</span> Method</h2>
+</section>
+<section id="about-quarto-extensions-formats-and-quarto-journals-article" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="about-quarto-extensions-formats-and-quarto-journals-article"><span class="header-section-number">4</span> About Quarto Extensions formats And Quarto Journals Article</h2>
 <p>First, please get familiar with the following resources:</p>
 <ul>
 <li><a href="https://quarto.org/docs/extensions/formats.html">Creating Formats</a> in Quarto as part of the <a href="https://quarto.org/docs/extensions/">Extensions</a> mechanism.</li>
 <li><a href="https://quarto.org/docs/journals/">Journals Articles</a> for Quarto.</li>
 </ul>
 </section>
-<section id="structure-of-this-repository" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="structure-of-this-repository"><span class="header-section-number">3</span> Structure of this repository</h2>
+<section id="structure-of-this-repository" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="structure-of-this-repository"><span class="header-section-number">5</span> Structure of this repository</h2>
 <p>Everything for the extensions is in <code>_extensions</code>. See Quarto doc for details.</p>
 <ul>
 <li><p>In <code>partials</code>, you’ll find the <code>.tex</code> partials that can be used and should be removed or tweaked,s</p></li>
@@ -196,8 +206,8 @@ window.Quarto = {
 <li><p><code>aft</code> format sets some defaults which are different from <code>pdf</code> or <code>html</code>, link setting links to URL in read inside PDF output.</p></li>
 </ul>
 <p>Source repository for this template format can found on <a href="https://github.com/quarto-journals/article-format-template">Github</a></p>
-<section id="extensionsaft" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="extensionsaft"><span class="header-section-number">3.1</span> <code>_extensions\aft</code></h3>
+<section id="extensionsaft" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="extensionsaft"><span class="header-section-number">5.1</span> <code>_extensions\aft</code></h3>
 <p>In this folder you’ll find everything that defines the extensions which could be installed using <code>quarto install extension</code> or be part of the template when using <code>quarto use template</code></p>
 <dl>
 <dt>Format Metadata</dt>
@@ -258,8 +268,8 @@ This template repo contains all the relevant partials that you can use with Quar
 <div style="page-break-after: always;"></div>
 </section>
 </section>
-<section id="checklist-creating-a-custom-format" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="checklist-creating-a-custom-format"><span class="header-section-number">4</span> Checklist: Creating a custom format</h2>
+<section id="checklist-creating-a-custom-format" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="checklist-creating-a-custom-format"><span class="header-section-number">6</span> Checklist: Creating a custom format</h2>
 <p>Here is the checklist to help you know what to modify:</p>
 <ul>
 <li>Read the resources mentioned at the top,</li>
@@ -275,15 +285,15 @@ This template repo contains all the relevant partials that you can use with Quar
 <li>Publish a demo of you format to github pages of the repo by using <code>quarto publish</code> command</li>
 </ul>
 </section>
-<section id="demo-of-some-features-found-in-this-demo-journal-template" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">5</span> Demo of some features found in this demo journal template</h2>
-<section id="sec-shortcode" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">5.1</span> Shortcode demo</h3>
+<section id="demo-of-some-features-found-in-this-demo-journal-template" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="demo-of-some-features-found-in-this-demo-journal-template"><span class="header-section-number">7</span> Demo of some features found in this demo journal template</h2>
+<section id="sec-shortcode" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="sec-shortcode"><span class="header-section-number">7.1</span> Shortcode demo</h3>
 <p>PDF are rendered using {{&lt; latex &gt;}} but it is best if one can use a Markdown syntax for cross format support.</p>
 <p><code></code> used in source is a shortcode syntax where the shortcode is included in the extension folder <code>_extensions</code></p>
 </section>
-<section id="sec-summary" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">5.2</span> Text color</h3>
+<section id="sec-summary" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="sec-summary"><span class="header-section-number">7.2</span> Text color</h3>
 <p>Our format makes applying color on inline text possible using the <code>[content]{color=&lt;name&gt;}</code> syntax. Let’s see an example.</p>
 <p>Here we are using a special feature of our format which is the coloring because <span color="mypink">pink is a <strong>nice</strong> color</span>.</p>
 <p>This is possible thanks to the Lua Filter included in the custom extension format.</p>
@@ -298,8 +308,8 @@ This template repo contains all the relevant partials that you can use with Quar
 </ul>
 </section>
 </section>
-<section id="table" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="table"><span class="header-section-number">6</span> Table</h2>
+<section id="table" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="table"><span class="header-section-number">8</span> Table</h2>
 <table class="table">
 <thead>
 <tr class="header">
@@ -387,8 +397,8 @@ Table&nbsp;1: Caption centered above table
 </div>
 </div>
 </section>
-<section id="math" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="math"><span class="header-section-number">7</span> Math</h2>
+<section id="math" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="math"><span class="header-section-number">9</span> Math</h2>
 <p>The equation is displayed here as <a href="#eq-1" class="quarto-xref">Equation&nbsp;1</a></p>
 <p><span id="eq-1"><span class="math display">\[
 \frac{1}{2}
@@ -401,9 +411,10 @@ y = mx + b
 </div>
 <p>See <a href="#thm-line" class="quarto-xref">Theorem&nbsp;1</a>. More theorem and proof can be found at https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs</p>
 </section>
-<section id="figure" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="figure"><span class="header-section-number">8</span> Figure</h2>
-<div class="cell">
+<section id="figure" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="figure"><span class="header-section-number">10</span> Figure</h2>
+<p>Tikz</p>
+<div class="cell" data-caption="A Tikz figure">
 <div class="cell-output-display">
 <div id="fig-tikz" class="quarto-figure quarto-figure-center quarto-float anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -417,6 +428,30 @@ Figure&nbsp;1
 </div>
 </div>
 </div>
+<p>Web import</p>
+<p><img src="https://stevengogogo.github.io/quarto-neurips-template/template_files/figure-html/fig-tikz-1.png" class="img-fluid"></p>
+</section>
+<section id="label-latex-code" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="label-latex-code"><span class="header-section-number">11</span> Label latex code</h2>
+<div id="tbl-1" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: This is a table caption.
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+
+</div>
+</figure>
+</div>
+<p>From <a href="https://github.com/quarto-dev/quarto-cli/discussions/6734">https://github.com/quarto-dev/quarto-cli/discussions/6734</a></p>
+<div>
+<p>Algorithm caption.</p>
+</div>
+<p>See <a href="#tbl-1" class="quarto-xref">Table&nbsp;2</a> algorithm <span class="citation" data-cites="alg-1"><a href="#ref-alg-1" role="doc-biblioref"><strong>alg-1?</strong></a></span> (referencing alg not supported yet)</p>
+</section>
+<section id="conclusion" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">12</span> Conclusion</h2>
+<p>Neurips pdf: <a href="https://media.neurips.cc/Conferences/NeurIPS2023/Styles/neurips_2023.pdf">https://media.neurips.cc/Conferences/NeurIPS2023/Styles/neurips_2023.pdf</a></p>
 </section>
 <section id="bibliography" class="level1 unnumbered">
 
