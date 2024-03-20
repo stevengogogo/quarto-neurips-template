@@ -29,6 +29,11 @@ This is a dummy example only for the purpose to use this repo as a template star
 
 This quarto extension format supports PDF and HTML outputs. `quarto-journals` is aiming at porting existing {{< latex >}} template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.
 
+## Related Work 
+
+
+## Method
+
 ## About Quarto Extensions formats And Quarto Journals Article
 
 First, please get familiar with the following resources: 
@@ -183,12 +188,27 @@ $$
 \frac{1}{2}
 $${#eq-1}
 
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+See @thm-line. More theorem and proof can be found at https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs
+
+
 
 ## Figure
 
-
+Tikz
 ```{r, engine = 'tikz'}
 #| label: fig-tikz
+#| caption: A Tikz figure
 #| echo: false
 \begin{tikzpicture}[node distance=2cm, auto, thick, scale=2, every node/.style={transform shape}]
 \node (P) {$P$};
@@ -205,3 +225,11 @@ $${#eq-1}
 \draw[->, dashed] (P1) to node {$k$} (P);
 \end{tikzpicture}
 ```
+
+Web import 
+
+![](https://stevengogogo.github.io/quarto-neurips-template/template_files/figure-html/fig-tikz-1.png)
+
+
+
+## Conclusion
