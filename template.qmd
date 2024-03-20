@@ -230,8 +230,58 @@ Web import
 
 ![](https://stevengogogo.github.io/quarto-neurips-template/template_files/figure-html/fig-tikz-1.png)
 
+## Label latex code
 
+
+::: {#tbl-1}
+```{=latex}
+\begin{tabular}{||c c||} 
+ \hline
+ Col1 & Col2 \\
+ \hline\hline
+ 1 & 4 \\ 
+ 2 & 5 \\
+ 3 & 6 \\
+ \hline
+\end{tabular}
+
+This is a table caption.
+:::
+
+From [https://github.com/quarto-dev/quarto-cli/discussions/6734](https://github.com/quarto-dev/quarto-cli/discussions/6734)
+
+::: {} 
+
+```{=latex}
+\begin{algorithm}
+\caption{An algorithm with caption} \label{alg-1}
+\begin{algorithmic}
+\Require $n \geq 0$
+\Ensure $y = x^n$
+\State $y \gets 1$
+\State $X \gets x$
+\State $N \gets n$
+\While{$N \neq 0$}
+\If{$N$ is even}
+    \State $X \gets X \times X$
+    \State $N \gets \frac{N}{2}$ 
+\ElsIf{$N$ is odd}
+    \State $y \gets y \times X$
+    \State $N \gets N - 1$
+\EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+Algorithm caption.
+
+:::
+
+See @tbl-1
+algorithm @alg-1 (referencing alg not supported yet)
 
 ## Conclusion
 
 Neurips pdf: [https://media.neurips.cc/Conferences/NeurIPS2023/Styles/neurips_2023.pdf](https://media.neurips.cc/Conferences/NeurIPS2023/Styles/neurips_2023.pdf)
+
+

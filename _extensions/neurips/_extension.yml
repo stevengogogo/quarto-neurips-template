@@ -17,6 +17,8 @@ contributes:
       header-includes: |
         \usepackage{orcidlink}  
         \usepackage[nonatbib, preprint]{neurips_2023}
+        \usepackage{algorithm}
+        \usepackage{algpseudocode}
         \usepackage{amsmath}
         \usepackage{amsthm}
         \usepackage[utf8]{inputenc} % allow utf-8 input
