@@ -1,3 +1,5 @@
+> **Thie Repo is archieved. All development is moved to https://github.com/stevengogogo/neurips-quarto-extension**
+
 # NeurIPS 2023 Submission Template with Quarto Journal
 
 <!-- REMOVE THIS IN YOUR FORMAT TEMPLATE -->
