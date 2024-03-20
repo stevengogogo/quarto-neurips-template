@@ -42,5 +42,6 @@ contributes:
       # define default configuration for the html version of your format
       number-sections: true
       toc: true
+      source: true
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
+      csl: https://www.zotero.org/styles/ieee
